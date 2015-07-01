@@ -60,7 +60,7 @@ function templateCacheFiles(root, base, templateBody, transformUrl) {
       url = path.join(root, file.path.replace(base || file.base, ''));
     }
 
-    if (root === '.' || root.indexOf('./') === 0) {
+    if (root === '.' || root.indexOf('./') === -1) {
       url = './' + url;
     }
 
